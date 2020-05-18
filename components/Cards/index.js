@@ -18,3 +18,29 @@
 // </div>
 //
 // Use your function to create a card for each of the articles and add the card to the DOM.
+
+// parent element cardComponent will be atached to
+const cardsContainer = document.querySelector('.cards-container');
+console.log('Card Container:', cardsContainer)
+
+// promise
+axios.get('https://lambda-times-backend.herokuapp.com/articles')
+.then(response => {
+    console.log('This is the card response:', response)
+})
+.catch(error => {
+    console.log('Card response error', error)
+})
+// card component
+
+function cardComponent (){
+    // create elemetns
+
+    // structure elements
+
+    // add classes
+
+    // add content
+
+    return
+}
