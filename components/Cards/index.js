@@ -41,7 +41,7 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
 
 // card component
 
-function cardComponent (){
+function cardComponent (artHeadline, authorPhoto, authorName){
     // create elements
     const card = document.createElement('div')
     const headline = document.createElement('div')
@@ -56,19 +56,17 @@ function cardComponent (){
     author.appendChild(imgContainer)
     imgContainer.appendChild(img)
     author.appendChild(name)
+
     // add classes
+    card.classList.add('card')
+    headline.classList.add('headline')
+    author.classList.add('author')
+    imgContainer.classList.add('img-container')
 
     // add content
+    headline.textContent = artHeadline
+    img.src = authorPhoto
+    name.textContent = authorName
 
-    return
+    return card
 }
-
-{/* <div class="card">
-//   <div class="headline">{Headline of article}</div>
-//   <div class="author">
-//     <div class="img-container">
-//       <img src={url of authors image} />
-//     </div>
-//     <span>By {author's name}</span>
-//   </div>
-// </div> */}
