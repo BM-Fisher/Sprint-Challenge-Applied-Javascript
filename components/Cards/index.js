@@ -42,7 +42,13 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
     })
 
     bootstrapArt.forEach(article => {
-        console.log('ABootstrap article:', article)
+        console.log('A Bootstrap article:', article)
+        const cardArticle = cardComponent(article.headline, article.authorPhoto, article.authorName)
+        cardsContainer.appendChild(cardArticle)
+    })
+
+    techArt.forEach(article => {
+        console.log('A Technology article:', article)
         const cardArticle = cardComponent(article.headline, article.authorPhoto, article.authorName)
         cardsContainer.appendChild(cardArticle)
     })
