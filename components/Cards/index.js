@@ -34,6 +34,12 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
     const techArt = response.data.articles.technology
     const jqueryArt = response.data.articles.jquery
     const nodeArt = response.data.articles.node
+
+    JSArt.forEach (article => {
+        console.log('A JS article', article)
+        const cardArticle = cardComponent(article.headline, article.authorPhoto, article.authorName)
+        cardsContainer.appendChild(cardArticle)
+    })
 })
 .catch(error => {
     console.log('Card response error', error)
