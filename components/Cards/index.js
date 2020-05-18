@@ -36,7 +36,13 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
     const nodeArt = response.data.articles.node
 
     JSArt.forEach (article => {
-        console.log('A JS article', article)
+        console.log('A JS article:', article)
+        const cardArticle = cardComponent(article.headline, article.authorPhoto, article.authorName)
+        cardsContainer.appendChild(cardArticle)
+    })
+
+    bootstrapArt.forEach(article => {
+        console.log('ABootstrap article:', article)
         const cardArticle = cardComponent(article.headline, article.authorPhoto, article.authorName)
         cardsContainer.appendChild(cardArticle)
     })
