@@ -7,3 +7,30 @@
 //
 //  Each tab should look like this:
 //    <div class="tab">topic here</div>
+
+// Add tabs function to parent
+
+
+// create axios
+axios.get ('https://lambda-times-backend.herokuapp.com/topics')
+    .then (response => {
+        console.log('Response from site:', response)
+    })
+    .catch (error => {
+        console.log('Somithing went wrong:', error)
+    })
+
+
+// create tab component
+function tabComponent (tabs) {
+    // create elements
+    const tab = document.createElement('div')
+    // give structure
+
+    // add classes
+    tab.classList.add('tab')
+    // add content
+    tab.textContent = tabs
+
+    return tab
+}
