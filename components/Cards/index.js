@@ -27,20 +27,48 @@ console.log('Card Container:', cardsContainer)
 axios.get('https://lambda-times-backend.herokuapp.com/articles')
 .then(response => {
     console.log('This is the card response:', response)
+    // going in order of trending topics
+    const JSArt = response.data.articles.javascript
+    console.log(JSArt)
+    const bootstrapArt = response.data.articles.bootstrap
+    const techArt = response.data.articles.technology
+    const jqueryArt = response.data.articles.jquery
+    const nodeArt = response.data.articles.node
 })
 .catch(error => {
     console.log('Card response error', error)
 })
+
 // card component
 
 function cardComponent (){
-    // create elemetns
+    // create elements
+    const card = document.createElement('div')
+    const headline = document.createElement('div')
+    const author = document.createElement('div')
+    const imgContainer = document.createElement('div')
+    const img = document.createElement('img')
+    const name = document.createElement('span')
 
     // structure elements
-
+    card.appendChild(headline)
+    card.appendChild(author)
+    author.appendChild(imgContainer)
+    imgContainer.appendChild(img)
+    author.appendChild(name)
     // add classes
 
     // add content
 
     return
 }
+
+{/* <div class="card">
+//   <div class="headline">{Headline of article}</div>
+//   <div class="author">
+//     <div class="img-container">
+//       <img src={url of authors image} />
+//     </div>
+//     <span>By {author's name}</span>
+//   </div>
+// </div> */}
