@@ -29,14 +29,19 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your team lead.
 
 1. What is the DOM?
+    DOM is a "living/breathing" repersentation of HTML. It treats the HTML like a tree structure where each branch repersents a part of the HTML document. You can change the page by accessing the appriate branch.
 
 2. What is an event?
+    When a certain action occurs (mouseover, click, etc) a signal is sent from the browser saying that action has occured; this is called an event.
 
 3. What is an event listener?
+    When an event(click) is triggered, the assignment(callback) made for that specific event is executed(the action inside the callback) for that specific element is called an eventListener.
 
 4. Why would we convert a NodeList into an Array?
+    To add more functionality to an element we would use Array.from() to make an array from a nodelist. Nodelist are limited in the methods they can use (forEach()) but an Array has more methods at it's disposable making it more powerful.
 
 5. What is a component?
+    Reusable chunk of code that is used to solve a specific problem using HTML, CSS, and JS
 
 ### Git Set up
 
